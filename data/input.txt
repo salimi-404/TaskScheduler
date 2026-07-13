@@ -1,0 +1,16 @@
+# Format:
+# id, priority, duration, dependencies, deadline, profit
+#
+# dependencies:
+#   - means no dependency
+#   A|B means this task needs A and B first
+#
+# deadline and profit are optional extra features.
+
+A, 0, 20, -, 60, 500
+B, 10, 30, A, 100, 400
+C, 20, 40, A, 130, 700
+D, 0, 20, B|C, 170, 1000
+E, 30, 10, B, 120, 150
+F, 10, 30, D|E, 230, 900
+G, 20, 20, -, 80, 200

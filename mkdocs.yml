@@ -1,0 +1,78 @@
+site_name: مستندات Task Scheduler
+site_url: https://your-site-url.com
+site_description: مستندات پروژه شبیه‌ساز زمان‌بند وظایف
+
+theme:
+  name: material
+  language: fa
+  font:
+    text: Vazirmatn
+    code: Fira Code
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/theme-light-dark
+        name: تغییر به حالت تاریک
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/theme-light-dark
+        name: تغییر به حالت روشن
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - content.code.annotate
+    - content.code.copy
+    - toc.follow
+    - toc.integrate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: "¶"
+      toc_depth: 4
+  - tables
+  - def_list
+  - attr_list
+
+plugins:
+  - search:
+      lang: fa
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [.]
+          options:
+            show_root_heading: true
+            show_source: true
+            heading_level: 2
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username/your-repo
+      name: مخزن گیت‌هاب
+
+extra_css:
+  - stylesheets/extra.css
