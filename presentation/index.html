@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#task-scheduler-simulator" class="md-skip">
+        <a href="#_1" class="md-skip">
           پرش به محتویات
         </a>
       
@@ -395,21 +395,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📂 ساختار پروژه
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✨ ویژگی‌های کلیدی
+        📂 ساختار ماژولار پروژه
       
     </span>
   </a>
@@ -420,7 +409,18 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛠 نحوه اجرا
+        ✨ ویژگی‌های کلیدی و مکانیک‌های سیستم
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠 راهنمای تست و اجرای سیستم
       
     </span>
   </a>
@@ -489,21 +489,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📂 ساختار پروژه
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✨ ویژگی‌های کلیدی
+        📂 ساختار ماژولار پروژه
       
     </span>
   </a>
@@ -514,7 +503,18 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛠 نحوه اجرا
+        ✨ ویژگی‌های کلیدی و مکانیک‌های سیستم
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠 راهنمای تست و اجرای سیستم
       
     </span>
   </a>
@@ -538,30 +538,30 @@
 
 
 
-<h1 id="task-scheduler-simulator">🚀 شبیه‌ساز زمان‌بند وظایف (Task Scheduler Simulator)<a class="headerlink" href="#task-scheduler-simulator" title="Permanent link">&para;</a></h1>
-<p>این پروژه یک سیستم شبیه‌سازی هوشمند برای مدیریت و زمان‌بندی وظایف (Tasks) است که با رعایت اصول وابستگی‌ها (Dependencies)، اولویت‌بندی (Priority) و بررسی مهلت زمانی (Deadline) طراحی شده است.</p>
+<h1 id="_1">📊 معرفی و ساختار پروژه<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>این صفحه دید کلی نسبت به معماری شبیه‌ساز، نحوه سازماندهی فایل‌ها و ویژگی‌های کلیدی سیستم به شما ارائه می‌دهد.</p>
 <hr />
-<h2 id="_1">📂 ساختار پروژه<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_2">📂 ساختار ماژولار پروژه<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>پروژه به صورت کاملاً شیءگرا و تفکیک‌شده طراحی شده است تا توسعه و نگهداری آن آسان باشد:</p>
 <ul>
-<li><code>models/</code>: شامل کلاس‌های پایه (مانند <code>Task</code>).</li>
-<li><code>scheduler/</code>: هسته اصلی منطق زمان‌بندی و تشخیص چرخه‌ها (Cycles).</li>
-<li><code>tests/</code>: تست‌های واحد برای تضمین صحت عملکرد سیستم.</li>
-<li><code>main.py</code>: نقطه ورود و اجرای برنامه.</li>
+<li><strong><code>models/</code>:</strong> شامل کلاس‌های پایه و ساختار داده‌ای وظایف (مانند <code>Task</code>).</li>
+<li><strong><code>scheduler/</code>:</strong> هسته اصلی و موتور زمان‌بندی، مدیریت صف اولویت و تشخیص چرخه‌ها (Cycles).</li>
+<li><strong><code>tests/</code>:</strong> تست‌های واحد (Unit Tests) جامع برای تضمین صحت عملکرد کل سیستم.</li>
+<li><strong><code>main.py</code>:</strong> نقطه ورود، شبیه‌سازی سناریوها و اجرای نهایی برنامه.</li>
 </ul>
-<h2 id="_2">✨ ویژگی‌های کلیدی<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="_3">✨ ویژگی‌های کلیدی و مکانیک‌های سیستم<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li>✅ <strong>مدیریت اولویت‌ها:</strong> صف‌بندی هوشمند وظایف بر اساس اولویت عددی.</li>
-<li>✅ <strong>تشخیص وابستگی:</strong> استفاده از الگوریتم‌های گراف برای جلوگیری از چرخه‌های بی‌پایان.</li>
-<li>✅ <strong>مدیریت مهلت زمانی:</strong> حذف خودکار وظایف منقضی شده و مسدود کردن وابستگان آن‌ها.</li>
-<li>✅ <strong>تست‌محور:</strong> دارای تست‌های واحد جامع برای اطمینان از صحت منطق برنامه.</li>
+<li><strong>✅ مدیریت هوشمند اولویت‌ها:</strong> صف‌بندی کارآمد وظایف در صف اولویت‌دار (Min-Heap) بر اساس ددلاین و فاکتور Slack Time.</li>
+<li><strong>✅ اولویت‌بندی مالی (Profit):</strong> بهینه‌سازی چیدمان زمانی وظایف برای کسب حداکثر سود مالی در ددلاین‌های فشرده.</li>
+<li><strong>✅ گراف وابستگی و تشخیص چرخه:</strong> استفاده از الگوریتم‌های گراف جهت شناسایی وابستگی‌های حلقوی و جلوگیری از بن‌بست.</li>
+<li><strong>✅ مدیریت آبشاری مهلت‌های زمانی:</strong> حذف وظایف منقضی‌شده و مسدود کردن خودکار تمام تسک‌های وابسته به آن‌ها.</li>
 </ul>
-<h2 id="_3">🛠 نحوه اجرا<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>برای اجرای برنامه در ترمینال، از دستور زیر استفاده کنید:
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>main.py
-</code></pre></div></p>
-<p>برای اجرای تست‌ها و اطمینان از سلامت کد:
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>discover<span class="w"> </span>tests
-</code></pre></div></p>
+<hr />
+<h2 id="_4">🛠 راهنمای تست و اجرای سیستم<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>برای اجرای سناریوی شبیه‌سازی پیش‌فرض در ترمینال، از دستور زیر استفاده کنید:
+```bash
+python main.py</p>
 
 
 
