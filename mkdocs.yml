@@ -1,78 +1,65 @@
-site_name: مستندات Task Scheduler
-site_url: https://your-site-url.com
-site_description: مستندات پروژه شبیه‌ساز زمان‌بند وظایف
+site_name: مستندات شبیه‌ساز زمان‌بندی وظایف 🚀
+site_description: شبیه‌ساز هوشمند زمان‌بندی و مدیریت تسک‌ها با پایتون
 
 theme:
   name: material
   language: fa
-  font:
-    text: Vazirmatn
-    code: Fira Code
-  palette:
-    - scheme: default
-      primary: blue
-      accent: blue
-      toggle:
-        icon: material/theme-light-dark
-        name: تغییر به حالت تاریک
-    - scheme: slate
-      primary: blue
-      accent: blue
-      toggle:
-        icon: material/theme-light-dark
-        name: تغییر به حالت روشن
   features:
     - navigation.tabs
     - navigation.sections
-    - navigation.expand
     - navigation.top
-    - navigation.instant
-    - content.code.annotate
+    - search.suggest
+    - search.highlight
     - content.code.copy
-    - toc.follow
-    - toc.integrate
 
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: تغییر به حالت تاریک
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: تغییر به حالت روشن
+
+  font:
+    text: Vazirmatn
+    code: Roboto Mono
+
+# تنظیمات الحاقیات اصلی متن
 markdown_extensions:
+  - toc:
+      permalink: true
   - admonition
   - pymdownx.details
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-  - toc:
-      permalink: "¶"
-      toc_depth: 4
-  - tables
-  - def_list
-  - attr_list
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
 
+# رفع قطعی مشکل آدرس‌دهی ماژول‌ها در پایتون
 plugins:
-  - search:
-      lang: fa
+  - search
   - mkdocstrings:
-      default_handler: python
       handlers:
         python:
-          paths: [.]
+          paths: [".", "models"] # اضافه شدن مسیر مستقیم پوشه مدل‌ها
           options:
-            show_root_heading: true
             show_source: true
-            heading_level: 2
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/your-username/your-repo
-      name: مخزن گیت‌هاب
+            show_root_heading: true
+            show_root_toc_entry: true
 
 extra_css:
-  - stylesheets/extra.css
+  - https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap
+
+# منوی ناوبری سایت
+nav:
+  - خانه: index.md
+  - ارائه: presentation.md
+  - مستندات فنی کد: simulation.md
